@@ -1,0 +1,32 @@
+
+
+.head{
+    background-color: rgb(107, 29, 180);
+}
+.head2{
+    background-color: rgb(107, 29, 180);
+}
+.navbar-brand{
+    color: white;
+    font-size: 24px;
+}
+.navbar-nav a{
+    color: white;
+}
+
+/* hero section */
+#home{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://cdn.pixabay.com/photo/2017/08/02/13/09/confetti-2571539_1280.jpg) center;
+    background-size: cover;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* isi section */
+#isi{
+    background-color: rgb(107, 29, 180);
+}
