@@ -12,6 +12,75 @@
     color: white;
 }
 
+/* ARTISTS PAGE */
+#artists {
+    background-color: rgb(107, 29, 180);
+    color: white;
+    padding: 60px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 300px;
+    object-fit: cover;
+}
+.artists-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.artist-card {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+}
+
+.artists-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.artists-text {
+    padding: 15px;
+}
+
+.artists-text h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+
+.artists-text p {
+    font-size: 14px;
+    color: #bbb;
+}
+
 /* hero section */
 #home{
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://cdn.pixabay.com/photo/2017/08/02/13/09/confetti-2571539_1280.jpg) center;
