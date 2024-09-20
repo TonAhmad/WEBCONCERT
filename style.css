@@ -22,6 +22,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+     
 }
 
 /* isi section */
@@ -66,3 +67,73 @@
     color: black;
     padding-top: 20px;
 }
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Sign in form */
+.signin {
+    padding: 80px;
+}
+.signin-form {
+    font-weight: bold;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.submit-button, .daftar-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.daftar-button {
+    background-color:  rgb(159, 43, 226);
+    color: #fff;
+}
+footer {
+    background-color: rgb(107, 29, 180);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+};
