@@ -17,14 +17,14 @@
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://cdn.pixabay.com/photo/2017/08/02/13/09/confetti-2571539_1280.jpg) center;
     background-size: cover;
     color: white;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-    mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255,0)50);  
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0));
+    /* background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255,0)50);   */
 }
 
 /* isi section */
@@ -69,130 +69,33 @@
     color: black;
     padding-top: 20px;
 }
-
-/* General Styling */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
-}
-ul {
-    list-style: none;
-}
-body, html {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100%;
+.col{
     display: flex;
-    flex-direction: column;
-}
-
-
-/* Sign in form */
-.signin {
-    padding: 80px;
-}
-.signin-form {
-    font-weight: bold;
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.input-group {
-    margin-bottom: 20px;
-}
-input[type="email"], input[type="password"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.submit-button, .daftar-button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.submit-button {
-    background-color: #4CAF50;
-    color: #fff;
-}
-.daftar-button {
-    background-color:  rgb(159, 43, 226);
-    color: #fff;
-}
-footer {
-    background-color: rgb(107, 29, 180);
+
+/* endpost section */
+#endpost{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://img.freepik.com/free-photo/rear-view-excited-people-with-arms-raised-having-fun-while-watching-confetti-fireworks-front-stage-music-festival-copy-space_637285-568.jpg?t=st=1727019673~exp=1727023273~hmac=3cf7dee2e4ad3920908a59b8f4963566f7b3cd2717026459bb290946199c09f5&w=1480) center;
+    background-size: cover;
     color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-};
-
-/* Sign Up Form styles */
-.signup-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.signup-container h2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 20px;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 11%);
+}
+.buton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.signup-container .form-group {
-    margin-bottom: 15px;
-}
 
-.signup-container .form-group label {
-    font-size: 1rem;
-    font-weight: bold;
-}
 
-.signup-container .form-control {
-    padding: 10px;
-    font-size: 1rem;
-}
 
-.signup-container .btn-signup {
-    background-color: rgb(107, 29, 180);
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 4px;
-}
 
-.signup-container .btn-signup:hover {
-    background-color: rgb(95, 24, 161);
-}
 
-.login-link {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.login-link a {
-    color: rgb(107, 29, 180);
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}

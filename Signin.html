@@ -6,51 +6,95 @@
     <title>Venue - Elefthéro</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background */
+        .logo{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img{
+            width: 100px;
+            height: auto;
+        }
+        #signin{
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.freepik.com/free-photo/close-up-recording-video-with-smartphone-concert-toned-picture_1153-6333.jpg?t=st=1727024174~exp=1727027774~hmac=828e4615759e90ad31df861b9249813974837733cd75cbfa1e3829682b2159be&w=740) center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            
+        }
+        
+        /* Sign in form */
+        .signin-form {
+            background: rgba(0, 0, 0, 0.304);
+            color: white;
+            backdrop-filter: blur(10px);
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .form-control{
+            background-color: transparent;
+        }
+        .form-control ::placeholder{
+            color: white
+        }
+        input[type="email"], input[type="password"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .submit-button, .daftar-button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .daftar-button {
+            background-color:  rgb(159, 43, 226);
+            color: #fff;
+        }
+        footer {
+            background-color: rgb(107, 29, 180);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        };
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="container-fluid head">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-xxl head2">
-                <a class="navbar-brand" href="#">Elefthéro</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="Artist.html">Artists</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link active" href="Venue.html">Venue</a>
-                        </li>
-                        <li class="nav-item me-4">
-                            <a class="nav-link" href="Signin.html">Sign In</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
     <!-- Sign in Section -->
-    <section class="signin">
-        <h1>Sign in</h1>
-        <b>Welcome back!</b>
-        <div class="signin-form">
-            <form action="" method="post">
-                <div class="input-group">
+    <section id="signin">
+        <div class="container-sm ">
+            <div class="logo"><h2>Elefthéro</h2><a href="index.html"><img src="Assets/Elefthero bening.png"></a></div>
+            <div class="signin-form"
+            ><form action="" method="post">
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Input the e-mail" required class="form-control">
                 </div>
-                <div class="input-group">
+                <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Input the Password" required class="form-control">
                 </div>
@@ -67,12 +111,9 @@
                 <button type="button" class="btn btn-danger w-100 mt-2" onclick="window.location.href='SignUp.html#form-daftar'">Create an account?</button>
             </form>
         </div>
+            
+        </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-3">
-        <p>All rights reserved ™ & Copyright ©</p>
-    </footer>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
