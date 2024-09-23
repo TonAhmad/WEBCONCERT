@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .head{
     background-color: rgb(107, 29, 180);
 }
@@ -74,6 +78,25 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 1024px){
+    iframe{
+        height: 220px;
+        width: 392px;
+    }
+}
+@media (max-width: 768px){
+    iframe{
+        height: 157px;
+        width: 280px;
+    }
+}
+/* @media(max-width: 425px){
+    iframe{
+        height: 95px;
+        width: 168px;
+    }
+} */
+
 
 /* endpost section */
 #endpost{
