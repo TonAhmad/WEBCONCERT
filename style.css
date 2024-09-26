@@ -1,19 +1,49 @@
-a{
+/* Remove underline from links */
+a {
     text-decoration: none;
 }
 
-.head{
-    background-color: rgb(107, 29, 180);
+/* Navbar header background */
+.head, .head2 {
+    background-color: rgb(107, 29, 180); /* Consistent background */
 }
-.head2{
-    background-color: rgb(107, 29, 180);
+
+/* Logo and text alignment */
+.head2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo + text and toggler */
 }
-.navbar-brand{
+
+/* Adjust the logo position and size */
+.head2 img {
+    margin-right: 10px; /* Space between logo and text */
+    height: 40px; /* Adjust logo height */
+}
+
+/* Brand styling */
+.navbar-brand {
     color: white;
     font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0; /* Remove any margins around the brand */
 }
-.navbar-nav a{
+
+/* Navbar links */
+.navbar-nav a {
     color: white;
+    margin-left: 15px; /* Add space between nav items */
+}
+
+/* Toggler button */
+.navbar-toggler {
+    margin-left: auto; /* Keep the toggler on the far right */
+    border-color: white; /* Optional: Change border color of the toggler */
+}
+
+.navbar-toggler-icon {
+    background-color: white; /* Optional: Change the color of the toggler icon */
 }
 
 /* hero section */ 
@@ -148,7 +178,60 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0));
 /* pricing section */
 
 
+/* footer */
+.footer {
+    background: linear-gradient(0deg, rgba(107, 29, 180, 1) 70%, rgba(107, 29, 180, 0) 100%), 
+                linear-gradient(135deg, rgb(107, 29, 180), rgb(164, 80, 227));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+.footer-logo img {
+    width: 100px; /* Adjust the logo size here */
+    height: auto;
+}
 
+.footer-info {
+    flex: 1;
+    text-align: center;
+}
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info, .social-links, .footer-logo {
+        margin-bottom: 10px;
+    }
+}
