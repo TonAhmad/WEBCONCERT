@@ -17,47 +17,43 @@ a{
 }
 
 /* hero section */ 
-  #home {
-    .carousel-item img {
-      display: block;
-      width: 100%;
-      height: 400px auto; /* adjust the height to your liking */
-      object-fit: cover;
-    }
-    .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.5); /* Atur transparansi teks */
-      bottom: 20px; /* Atur posisi teks di bagian bawah gambar */
-      left: 20px; /* Atur posisi teks di sebelah kiri */
-      padding: 10px; /* Berikan padding pada teks */
-      border-radius: 5px; /* Berikan border radius pada teks */
-    }
-    .carousel-caption h5 {
-      margin-bottom: 0; /* Hapus margin bawah pada judul */
-      font-size: 1.5rem; /* Atur ukuran font judul */
-    }
-    .carousel-caption p {
-      margin-bottom: 0; /* Hapus margin bawah pada paragraf */
-    }
-    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
-    mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0));
-  }
+#home {
+-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0)); 
+}
+
+.c1 img{
+  filter: brightness(0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+}
+ .carousel-caption{
+  padding-bottom: 40px;
+ }
   
   /* Responsive styles */
   @media (max-width: 768px) {
     .carousel {
-      width: 90%;
+      width: 100%;
     }
     .carousel-item img {
-      height: 300px; /* adjust the height to your liking */
+      height: 300px;
     }
   }
   
   @media (max-width: 480px) {
     .carousel {
-      width: 95%;
+      width: 100%;
     }
     .carousel-item img {
-      height: 200px; /* adjust the height to your liking */
+      height: 200px;
     }
   }
 
@@ -109,13 +105,13 @@ a{
     align-items: center;
 }
 @media (max-width: 1024px){
-    iframe{
+    .yt{
         height: 220px;
         width: 392px;
     }
 }
 @media (max-width: 768px){
-    iframe{
+    .yt{
         height: 157px;
         width: 280px;
     }
@@ -126,7 +122,9 @@ a{
         width: 168px;
     }
 } */
-
+.ply h1{
+  padding-top: 20px;
+}
 
 /* endpost section */
 #endpost{
@@ -146,6 +144,8 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+/* pricing section */
 
 
 

@@ -11,6 +11,9 @@
       crossorigin="anonymous"
     />
     <style>
+      a{
+        text-decoration: none;
+      }
       .head {
         background-color: rgb(107, 29, 180);
       }
@@ -32,12 +35,61 @@
         align-items: center;
       }
       .img{
-        width: 350px;
-        height: auto;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
       }
       .img img{
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+
+      .ticket-day{ grid-area: day;}
+      .ticket-date{ grid-area: date;}
+      .ticket-month{ grid-area: month;}
+      .ticket-year{ grid-area: year;}
+
+      .tgl{
+        color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-areas: 
+        'day day'
+        'date date'
+        'month year';
+      }
+      .tgl > span{
+        text-align: center;
+      }
+      .foto{
+        height: 130px;
+        width: auto;
+      }
+      .foto img{
+        height: 100%;
+        width: auto;
+      }
+      .capt{
+        color: black;
+      }
+      @media (max-width: 425px){
+        .tgl{
+        display: grid;
+        grid-template-areas: 
+        'day day'
+        'date date'
+        'month year';
+        align-items: center;
+        justify-content: center;
+        }
+        .tkt{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
       }
     </style>
     <title>Lany</title>
@@ -47,7 +99,7 @@
     <div class="container-fluid head">
       <nav class="navbar navbar-expand-lg">
         <div class="container-xxl head2">
-          <a class="navbar-brand" href="#">Elefthéro</a>
+          <a class="navbar-brand" href="../index.html ">Elefthéro</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -62,19 +114,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item me-4">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="Artist.html"> Artists</a>
+                <a class="nav-link" href="../Artist.html"> Artists</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="Pricing.html">Pricing</a>
+                <a class="nav-link" href="../Pricing.html">Pricing</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="Venue.html">Venue</a>
+                <a class="nav-link" href="../Venue.html">Venue</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="Signin.html">Sign In</a>
+                <a class="nav-link" href="../Signin.html">Sign In</a>
               </li>
             </ul>
           </div>
@@ -88,6 +140,38 @@
             <div class="container p">
                 <div class="img">
                     <img src="https://readdork.com/wp-content/uploads/2020/11/lany-oct20-59.jpg"  alt="">
+                </div>
+                <div class="container">
+                  <h1>Lany</h1>
+                  <p>LANY (/ˈleɪni/, an acronym for "Los Angeles, New York") is an American pop rock band from Los Angeles. Formed in Nashville in 2014, the band consists of guitarist and lead vocalist Paul Jason Klein and drummer Jake Clifford Goss.</p>
+                  <p>Signed to Polydor and Interscope Records, the band have released three top 5 albums: LANY (2017), Malibu Nights (2018), and Mama's Boy (2020). Additionally, they have released a few of singles, their most successful being the RIAA-certified "ILYSB" (2015), the Julia Michaels collaboration "Okay" (2019), "Super Far"(2017), "Malibu Nights" (2018) and "Mean It" (2019) featured Lauv. In 2020, they released their third studio album, Mama's Boy, which was followed by their fourth album, gg bb xx, in September 2021. In 2023, the band announced their fifth studio album A Beautiful Blur. The album will be their first on Sunset Records/Virgin Records, following their departure from Interscope Records.</p>
+                </div>
+                <div class="container">
+                  <h1>Event</h1>
+                  <div class="col-md-12 col-lg-6"></div>
+                    <div class="card">
+                      <div class="card-body">
+                        <a href="../formbeli.html">
+                          <div class="container text-center">
+                            <div class="row align-items-center tkt">
+                              <div class="col-2 tgl">
+                                <span class="ticket-day">Mon</span>
+                                <span class="ticket-date">28</span>
+                                <span class="ticket-month">Jun</span>
+                                <span class="ticket-year">2025</span>
+                              </div>
+                              <div class="col-4 foto">
+                                <img src="https://readdork.com/wp-content/uploads/2020/11/lany-oct20-59.jpg" alt="">
+                              </div>
+                              <div class="col capt">
+                                anything
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
