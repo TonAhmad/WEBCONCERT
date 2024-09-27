@@ -46,48 +46,65 @@
             <form class="needs-validation" novalidate>
                 <div class="mb-2">
                     <label for="name" class="form-label">Full Name</label>
-                    <input class="form-control" type="text" placeholder="insert your name" required>
+                    <input class="form-control" type="text" id="name" placeholder="insert your name" required>
                     <div class="invalid-feedback">
-                        minimum 2 character!
+                    Minimum 2 characters!
                     </div>
                     <div class="valid-feedback">
-                        looks good!
+                    Looks good!
                     </div>
                 </div>
+
                 <div class="mb-2">
                     <label for="email" class="form-label">Email</label>
-                    <input class="form-control" type="email" placeholder="enter your email">
+                    <input class="form-control" type="email" id="email" placeholder="enter your email">
                     <div class="invalid-feedback">
-                        example: username@example.com   
+                    Example: username@example.com
                     </div>
                 </div>
+
                 <div class="mb-2">
                     <label for="IDCard" class="form-label">ID card number</label>
-                    <input type="text" class="form-control">
-                </div>
+                    <input type="text" class="form-control" id="IDCard" maxlength="16" required>
+                    <div class="invalid-feedback">
+                    ID card number must be 16 digits and only contain numbers!
+                    </div>
+
                 <div class="mb-2">
                     <label for="address" class="form-label">Address</label>
-                    <textarea class="form-control" id="address"></textarea>
+                    <textarea class="form-control" id="address" required></textarea>
+                    <div class="invalid-feedback">
+                    Minimum 10 characters!
+                    </div>
                 </div>
-                    <div class="mb-2">
+
+                <div class="mb-2">
                     <label for="gender" class="form-label">Gender</label>
                     <div class="ms-3 form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Men</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Women</label>
-                        </div>
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Men" required>
+                    <label class="form-check-label" for="inlineRadio1">Men</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Women" required>
+                    <label class="form-check-label" for="inlineRadio2">Women</label>
+                    </div>
+                    <div class="invalid-feedback">
+                    Choose gender!
+                    </div>
                 </div>
+
                 <div class="mb-2">
                     <label for="ticket" class="form-label">Ticket</label>
-                    <select class="form-select" id="ticket">
-                        <option selceted>Select your ticket</option>
-                        <option value="LN1">ILYSB Lany tour</option>
-                        <option value="NK1">Buzz Niki Tour</option>
+                    <select class="form-select" id="ticket" required>
+                    <option value="" selected>Select your ticket</option>
+                    <option value="LN1">ILYSB Lany tour</option>
+                    <option value="NK1">Buzz Niki Tour</option>
                     </select>
+                    <div class="invalid-feedback">
+                    Choose a ticket!
+                    </div>
                 </div>
+
                 <div class="mb-2">
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
