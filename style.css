@@ -114,6 +114,10 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0));
 .card-body{
     padding: 5px;
 }
+.card img{
+    height: 180px;
+    width: 100%;
+}
 .card-title{
     padding-left: 10px;
     padding-top: 5px;
