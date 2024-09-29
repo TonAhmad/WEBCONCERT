@@ -39,11 +39,6 @@ a {
 /* Toggler button */
 .navbar-toggler {
     margin-left: auto; /* Keep the toggler on the far right */
-    border-color: white; /* Optional: Change border color of the toggler */
-}
-
-.navbar-toggler-icon {
-    background-color: white; /* Optional: Change the color of the toggler icon */
 }
 
 /* hero section */ 
@@ -178,9 +173,6 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0));
     justify-content: center;
     align-items: center;
 }
-
-/* pricing section */
-
 
 /* footer */
 .footer {
