@@ -1,10 +1,8 @@
 (() => {
   "use strict";
 
-  // Fetch all forms with the class "needs-validation"
   const forms = document.querySelectorAll(".needs-validation");
 
-  // Loop through each form and apply custom validation rules
   Array.from(forms).forEach((form) => {
     form.addEventListener(
       "submit",
@@ -59,21 +57,39 @@
           ticketSelect.setCustomValidity("");
         }
 
-        // If form is not valid, prevent submission
-        if (!form.checkValidity() || !isValid) {
+        // If form is valid, populate the modal
+        if (form.checkValidity() && isValid) {
+          event.preventDefault();
+          document.getElementById("modalName").innerText =
+            document.getElementById("name").value;
+          document.getElementById("modalEmail").innerText =
+            document.getElementById("email").value;
+          document.getElementById("modalIDCard").innerText =
+            document.getElementById("IDCard").value;
+          document.getElementById("modalAddress").innerText =
+            document.getElementById("address").value;
+          document.getElementById("modalGender").innerText =
+            document.querySelector('input[name="gender"]:checked').value;
+          document.getElementById("modalTicket").innerText =
+            document.getElementById("ticket").value;
+
+          var formModal = new bootstrap.Modal(
+            document.getElementById("formModal")
+          );
+          formModal.show();
+        } else {
           event.preventDefault();
           event.stopPropagation();
         }
 
-        // Add Bootstrap validation styles
         form.classList.add("was-validated");
       },
       false
     );
-    // Ensure only numbers are inputted
+
+    // Ensure only numbers are inputted for the ID Card field
     const idCardInput = form.querySelector("#IDCard");
     idCardInput.addEventListener("input", (event) => {
-      // Remove any non-numeric characters
       idCardInput.value = idCardInput.value.replace(/\D/g, "");
     });
   });
