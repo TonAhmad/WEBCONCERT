@@ -73,6 +73,63 @@
       width: 100%; 
       object-fit: cover; 
     }
+    /* footer */
+  .footer {
+      background: linear-gradient(0deg, rgba(107, 29, 180, 1) 70%, rgba(107, 29, 180, 0) 100%), 
+                  linear-gradient(135deg, rgb(107, 29, 180), rgb(164, 80, 227));
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+  }
+
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  .footer-logo img {
+      width: 100px; /* Adjust the logo size here */
+      height: auto;
+  }
+
+  .footer-info {
+      flex: 1;
+      text-align: center;
+  }
+
+  .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .social-links a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+      color: #ddd;
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          text-align: center;
+      }
+      
+      .footer-info, .social-links, .footer-logo {
+          margin-bottom: 10px;
+      }
+  }
 </style>
 </head>
 <body>
@@ -166,6 +223,26 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="Assets/Elefthero bening.png" alt="Start Logo" class="logo">
+    </div>
+    <div class="footer-info">
+      <p>&copy; Start, 2024 - All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
 
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
