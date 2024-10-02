@@ -87,6 +87,55 @@
       false
     );
 
+    document.getElementById('userForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      // Validate form
+      if (this.checkValidity()) {
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const idCard = document.getElementById('IDCard').value;
+          const address = document.getElementById('address').value;
+          const gender = document.querySelector('input[name="gender"]:checked').value;
+  
+          // Get ticket details
+          const ticketElement = document.getElementById('ticket');
+          const ticket = ticketElement.options[ticketElement.selectedIndex].text;
+          const price = ticketElement.options[ticketElement.selectedIndex].getAttribute('data-price');
+          const quantity = document.getElementById('quantity').value;
+  
+          // Get artist details
+          const artistElement = document.getElementById('artist');
+          const artist = artistElement.options[artistElement.selectedIndex].text;
+  
+          // Calculate total
+          const total = price * quantity;
+  
+          // Get current date
+          const currentDate = new Date().toLocaleDateString();
+  
+          // Update modal with form details and total price
+          document.getElementById('modalName').textContent = name;
+          document.getElementById('modalEmail').textContent = email;
+          document.getElementById('modalIDCard').textContent = idCard;
+          document.getElementById('modalAddress').textContent = address;
+          document.getElementById('modalGender').textContent = gender;
+          document.getElementById('modalTicket').textContent = ticket;
+          document.getElementById('modalArtist').textContent = artist;
+          document.getElementById('modalPrice').textContent = price.toLocaleString(); // Format price with commas
+          document.getElementById('modalQuantity').textContent = quantity;
+          document.getElementById('modalTotal').textContent = total.toLocaleString(); // Format total with commas
+          document.getElementById('modalDate').textContent = currentDate;
+  
+          // Show modal
+          const modal = new bootstrap.Modal(document.getElementById('formModal'));
+          modal.show();
+      } else {
+          this.classList.add('was-validated');
+      }
+  });  
+
     // Ensure only numbers are inputted for the ID Card field
     const idCardInput = form.querySelector("#IDCard");
     idCardInput.addEventListener("input", (event) => {
